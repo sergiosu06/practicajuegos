@@ -43,7 +43,7 @@ namespace VideojuegosSergio.Controllers
             return Ok(_aplicacionContexto.Email.ToList());
 
         }
-        [Route("/id")]
+        [Route("{id}")]
         [HttpPut]
         public IActionResult Put(
             [FromBody] Email email)
@@ -56,7 +56,7 @@ namespace VideojuegosSergio.Controllers
             return Ok(email);
         }
         
-        [Route("/id")]
+        [Route("{id}")]
         [HttpDelete]
         public IActionResult Delete(int emailId)
         {
