@@ -44,7 +44,7 @@ namespace VideojuegosSergio.Controllers
             return Ok(_aplicacionContexto.Video_juegos.ToList());
 
         }
-        [Route("/id")]
+        [Route("{id}")]
         [HttpPut]
         public IActionResult Put(
             [FromBody] Video_juegos video_juegos)
@@ -57,7 +57,7 @@ namespace VideojuegosSergio.Controllers
             return Ok(video_juegos);
         }
 
-        [Route("/id")]
+        [Route("{id}")]
         [HttpDelete]
         public IActionResult Delete(int videoJuegosID)
         {

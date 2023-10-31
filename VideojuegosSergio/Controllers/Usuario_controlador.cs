@@ -44,7 +44,7 @@ namespace VideojuegosSergio.Controllers
             return Ok(_aplicacionContexto.Usuarios.ToList());
 
         }
-        [Route("/id")]
+        [Route("{id})]
         [HttpPut]
         public IActionResult Put(
             [FromBody] Usuarios usuarios)
@@ -57,7 +57,7 @@ namespace VideojuegosSergio.Controllers
             return Ok(usuarios);
         }
 
-        [Route("/id")]
+        [Route("{id})]
         [HttpDelete]
         public IActionResult Delete(int usuariosID)
         {
